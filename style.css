@@ -1,5 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Add these styles to your CSS file */
 
+/* YouTube Section */
+.youtube-section {
+  margin-bottom: 36px;
+}
+
+.youtube-container {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  border-radius: 16px;
+  padding: 24px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  animation: pulse 2s infinite;
+}
+
+.youtube-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.youtube-icon {
+  font-size: 48px;
+  margin-right: 24px;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.youtube-content {
+  z-index: 1;
+}
+
+.youtube-content h4 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.youtube-content p {
+  margin: 0 0 16px 0;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+.youtube-btn {
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  color: #ff0000;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.youtube-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+  background: #f8fafc;
+}
+
+.youtube-btn i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.youtube-note {
+  margin-top: 12px !important;
+  font-size: 13px !important;
+  opacity: 0.8 !important;
+}
+
+.youtube-note i {
+  margin-right: 6px;
+}
 /* Animation Keyframes */
 @keyframes fadeInUp {
   from {
