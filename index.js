@@ -14,6 +14,32 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(element);
   });
   
+  // Platform switching functionality
+  const platformBtns = document.querySelectorAll('.platform-btn');
+  const setupContents = document.querySelectorAll('.setup-content');
+  
+  platformBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const platform = this.getAttribute('data-platform');
+      
+      // Update active button
+      platformBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Show corresponding content
+      setupContents.forEach(content => {
+        content.classList.remove('active');
+        if (content.id === `${platform}-setup`) {
+          content.classList.add('active');
+        }
+      });
+      
+      // Scroll to top of content
+      const contentSection = document.querySelector('.content-section');
+      contentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  
   // Add hover effects to step cards
   const stepCards = document.querySelectorAll('.step-card');
   stepCards.forEach(card => {
@@ -65,15 +91,15 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Add click animation to download button
-  const downloadBtn = document.querySelector('.btn-download');
-  if (downloadBtn) {
-    downloadBtn.addEventListener('click', function(e) {
+  const downloadBtns = document.querySelectorAll('.btn-download');
+  downloadBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
       if (this.getAttribute('href') === 'YOUR_GOOGLE_DRIVE_ZIP_LINK') {
         e.preventDefault();
         alert('Please update the download link in the HTML file!');
       }
     });
-  }
+  });
   
   // Add animation to register button text
   const registerBtn = document.querySelector('.register-btn');
@@ -85,4 +111,20 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 10);
     }, 4000);
   }
+  
+  // Add platform-specific animations
+  const platformButtons = document.querySelectorAll('.platform-btn');
+  platformButtons.forEach(btn => {
+    btn.addEventListener('mouseenter', function() {
+      if (!this.classList.contains('active')) {
+        this.style.transform = 'translateY(-3px)';
+      }
+    });
+    
+    btn.addEventListener('mouseleave', function() {
+      if (!this.classList.contains('active')) {
+        this.style.transform = 'translateY(0)';
+      }
+    });
+  });
 });
