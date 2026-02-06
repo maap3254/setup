@@ -42,6 +42,9 @@
                   <span class="badge-float" style="animation-delay: 0.4s;">
                     <i class="fas fa-rocket"></i> Efficient
                   </span>
+                  <span class="badge-float" style="animation-delay: 0.6s;">
+                    <i class="fas fa-mobile-alt"></i> Mobile Ready
+                  </span>
                 </div>
               </div>
             </td>
@@ -59,244 +62,477 @@
                   <strong class="magic-text">less than 2 minutes</strong>.
                 </p>
               </div>
-<!-- Add this right after the intro-box section -->
-<div class="animate-on-scroll youtube-section">
-  <div class="youtube-container">
-    <div class="youtube-icon">
-      <i class="fab fa-youtube"></i>
-    </div>
-    <div class="youtube-content">
-      <h4>Prefer Video Instructions?</h4>
-      <p>Watch our step-by-step setup guide on YouTube</p>
-      <a href="https://youtu.be/CjtqKLbPiRU?si=uKIA7aYeFvvokhJH" 
-         target="_blank" 
-         class="youtube-btn">
-        <i class="fas fa-play-circle"></i>
-        Watch Setup Tutorial (2:01)
-      </a>
-      <p class="youtube-note">
-        <i class="fas fa-clock"></i> Quick 2-minute video guide
-      </p>
-    </div>
-  </div>
-</div>
-              <!-- STEP 1 -->
-              <div class="animate-on-scroll step-card">
-                <div class="step-header">
-                  <div class="step-number step1-number">1</div>
-                  <h3 class="magic-text">
-                    <i class="fas fa-download"></i> Download the Extension
-                  </h3>
-                </div>
-                <p class="step-description">
-                  Download the Chrome extension ZIP file from Google Drive.
-                </p>
-                <a href="https://drive.usercontent.google.com/u/0/uc?id=1RkyeM1n38236peiMzipdFFEK2etDHXf8&export=download"
-                   class="shimmer-btn btn-download">
-                  <i class="fas fa-file-archive"></i>
-                  Download Extension ZIP
-                </a>
-                <p class="step-note">
-                  <i class="fas fa-spinner fa-spin"></i>
-                  File size: ~2MB • Download time: < 30 seconds
-                </p>
-              </div>
 
-              <!-- STEP 2 -->
-              <div class="animate-on-scroll step-card">
-                <div class="step-header">
-                  <div class="step-number step2-number">2</div>
-                  <h3 class="magic-text">
-                    <i class="fas fa-folder-open"></i> Unzip the File
-                  </h3>
-                </div>
-                <div style="animation: slideInLeft 0.8s ease;">
-                  <p class="step-description">
-                    Right-click the downloaded ZIP file and choose <strong>Extract</strong> or <strong>Unzip</strong>.
-                  </p>
-                  
+              <!-- Platform Selector -->
+              <div class="animate-on-scroll platform-selector">
+                <h3 class="magic-text">
+                  <i class="fas fa-laptop"></i> Choose Your Platform
+                </h3>
+                <div class="platform-buttons">
+                  <button class="platform-btn active" data-platform="desktop">
+                    <i class="fas fa-desktop"></i> Desktop (Chrome)
+                  </button>
+                  <button class="platform-btn" data-platform="mobile">
+                    <i class="fas fa-mobile-alt"></i> Mobile (Kiwi Browser)
+                  </button>
                 </div>
               </div>
 
-              <!-- STEP 3 -->
-              <div class="animate-on-scroll step-card">
-                <div class="step-header">
-                  <div class="step-number step3-number">3</div>
-                  <h3 class="magic-text">
-                    <i class="fab fa-chrome"></i> Install in Chrome
-                  </h3>
-                </div>
-                <div style="animation: slideInLeft 0.8s ease 0.2s both;">
-                  <ol class="step-list">
-                    <li>
-                      <span class="list-number">①</span>
-                      Open <strong>Google Chrome</strong>
-                    </li>
-                    <li>
-                      <span class="list-number">②</span>
-                      Go to:
-                      <code>chrome://extensions</code>
-                    </li>
-                    <li>
-                      <span class="list-number">③</span>
-                      Turn ON <strong>Developer mode</strong> (top-right toggle)
-                    </li>
-                    <li>
-                      <span class="list-number">④</span>
-                      Click the <strong>Load unpacked</strong> button
-                    </li>
-                    <li>
-                      <span class="list-number">⑤</span>
-                      Select the unzipped extension folder
-                    </li>
-                  </ol>
-                </div>
-                <div class="success-box">
-                  <p>
-                    <i class="fas fa-check-circle"></i>
-                    <strong>Success indicator:</strong> You'll see the Passport Scanner icon in your extensions list
-                  </p>
-                </div>
-              </div>
-
-              <!-- STEP 4 -->
-              <div class="animate-on-scroll step-card">
-                <div class="step-header">
-                  <div class="step-number step4-number">4</div>
-                  <h3 class="magic-text">
-                    <i class="fas fa-thumbtack"></i> Pin the Extension
-                  </h3>
-                </div>
-                <div style="animation: slideInLeft 0.8s ease 0.2s both;">
-                  <p class="step-description">
-                    Click the 🧩 Extensions icon in Chrome's toolbar and 
-                    <strong>pin the Passport Scanner</strong> so it's always visible for quick access.
-                  </p>
-                  <div class="why-pin-box">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <div>
-                      <strong>Why pin?</strong>
-                      <p>Pinning ensures one-click access to the scanner from any webpage.</p>
+              <!-- Desktop Setup Content -->
+              <div id="desktop-setup" class="setup-content active">
+                <!-- YouTube Section for Desktop -->
+                <div class="animate-on-scroll youtube-section">
+                  <div class="youtube-container">
+                    <div class="youtube-icon">
+                      <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="youtube-content">
+                      <h4>Prefer Video Instructions?</h4>
+                      <p>Watch our step-by-step setup guide on YouTube</p>
+                      <a href="https://youtu.be/CjtqKLbPiRU?si=uKIA7aYeFvvokhJH" 
+                         target="_blank" 
+                         class="youtube-btn">
+                        <i class="fas fa-play-circle"></i>
+                        Watch Desktop Setup Tutorial (2:01)
+                      </a>
+                      <p class="youtube-note">
+                        <i class="fas fa-clock"></i> Quick 2-minute video guide
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- STEP 5 -->
-              <div class="animate-on-scroll step-card">
-                <div class="step-header">
-                  <div class="step-number step5-number">5</div>
-                  <h3 class="magic-text">
-                    <i class="fas fa-cog"></i> Open Settings & Configure
-                  </h3>
-                </div>
-                <div style="animation: slideInLeft 0.8s ease 0.2s both;">
+                <!-- STEP 1 Desktop -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step1-number">1</div>
+                    <h3 class="magic-text">
+                      <i class="fas fa-download"></i> Download the Extension
+                    </h3>
+                  </div>
                   <p class="step-description">
-                    Click the extension icon, then open <strong>Settings</strong> and configure:
+                    Download the Chrome extension ZIP file from Google Drive.
                   </p>
-                  <div class="feature-grid">
-                    <div class="feature-card">
-                      <div class="feature-icon">
-                        <i class="fas fa-globe-americas"></i>
+                  <a href="https://drive.usercontent.google.com/u/0/uc?id=1RkyeM1n38236peiMzipdFFEK2etDHXf8&export=download"
+                     class="shimmer-btn btn-download">
+                    <i class="fas fa-file-archive"></i>
+                    Download Extension ZIP
+                  </a>
+                  <p class="step-note">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    File size: ~2MB • Download time: < 30 seconds
+                  </p>
+                </div>
+
+                <!-- STEP 2 Desktop -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step2-number">2</div>
+                    <h3 class="magic-text">
+                      <i class="fas fa-folder-open"></i> Unzip the File
+                    </h3>
+                  </div>
+                  <div style="animation: slideInLeft 0.8s ease;">
+                    <p class="step-description">
+                      Right-click the downloaded ZIP file and choose <strong>Extract</strong> or <strong>Unzip</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- STEP 3 Desktop -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step3-number">3</div>
+                    <h3 class="magic-text">
+                      <i class="fab fa-chrome"></i> Install in Chrome
+                    </h3>
+                  </div>
+                  <div style="animation: slideInLeft 0.8s ease 0.2s both;">
+                    <ol class="step-list">
+                      <li>
+                        <span class="list-number">①</span>
+                        Open <strong>Google Chrome</strong>
+                      </li>
+                      <li>
+                        <span class="list-number">②</span>
+                        Go to:
+                        <code>chrome://extensions</code>
+                      </li>
+                      <li>
+                        <span class="list-number">③</span>
+                        Turn ON <strong>Developer mode</strong> (top-right toggle)
+                      </li>
+                      <li>
+                        <span class="list-number">④</span>
+                        Click the <strong>Load unpacked</strong> button
+                      </li>
+                      <li>
+                        <span class="list-number">⑤</span>
+                        Select the unzipped extension folder
+                      </li>
+                    </ol>
+                  </div>
+                  <div class="success-box">
+                    <p>
+                      <i class="fas fa-check-circle"></i>
+                      <strong>Success indicator:</strong> You'll see the Passport Scanner icon in your extensions list
+                    </p>
+                  </div>
+                </div>
+
+                <!-- STEP 4 Desktop -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step4-number">4</div>
+                    <h3 class="magic-text">
+                      <i class="fas fa-thumbtack"></i> Pin the Extension
+                    </h3>
+                  </div>
+                  <div style="animation: slideInLeft 0.8s ease 0.2s both;">
+                    <p class="step-description">
+                      Click the 🧩 Extensions icon in Chrome's toolbar and 
+                      <strong>pin the Passport Scanner</strong> so it's always visible for quick access.
+                    </p>
+                    <div class="why-pin-box">
+                      <i class="fas fa-puzzle-piece"></i>
+                      <div>
+                        <strong>Why pin?</strong>
+                        <p>Pinning ensures one-click access to the scanner from any webpage.</p>
                       </div>
-                      <strong>Country</strong>
-                      <p>Select your country</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- STEP 5 Desktop -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step5-number">5</div>
+                    <h3 class="magic-text">
+                      <i class="fas fa-cog"></i> Open Settings & Configure
+                    </h3>
+                  </div>
+                  <div style="animation: slideInLeft 0.8s ease 0.2s both;">
+                    <p class="step-description">
+                      Click the extension icon, then open <strong>Settings</strong> and configure:
+                    </p>
+                    <div class="feature-grid">
+                      <div class="feature-card">
+                        <div class="feature-icon">
+                          <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <strong>Country</strong>
+                        <p>Select your country</p>
+                      </div>
+                      
+                      <div class="feature-card">
+                        <div class="feature-icon" style="animation-delay: 0.2s;">
+                          <i class="fas fa-city"></i>
+                        </div>
+                        <strong>City</strong>
+                        <p>Select your city</p>
+                      </div>
                     </div>
                     
-                    <div class="feature-card">
-                      <div class="feature-icon" style="animation-delay: 0.2s;">
-                        <i class="fas fa-city"></i>
+                    <p class="step-description">
+                      Add your default information:
+                    </p>
+                    <ul class="info-list">
+                      <li>
+                        <i class="fas fa-envelope"></i>
+                        Email address
+                      </li>
+                      <li>
+                        <i class="fas fa-phone"></i>
+                        Phone number
+                      </li>
+                      <li>
+                        <i class="fas fa-user"></i>
+                        Any other required default data
+                      </li>
+                    </ul>
+                    <p class="step-description">
+                      Finally, click the <strong class="register-btn">Register</strong> button.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- STEP 6 Desktop -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step6-number">6</div>
+                    <h3 class="magic-text">
+                      <i class="fas fa-rocket"></i> Start Using the Extension
+                    </h3>
+                  </div>
+                  <div style="animation: slideInLeft 0.8s ease 0.2s both;">
+                    <p class="step-description">
+                      Open the official website to begin:
+                    </p>
+                    
+                    <div class="website-link-box">
+                      <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: radial-gradient(circle, rgba(5, 150, 105, 0.1) 0%, transparent 70%);"></div>
+                      <a href="https://wafid.com/book-appointment/"
+                         target="_blank"
+                         class="website-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        https://wafid.com/book-appointment/
+                      </a>
+                      <p>
+                        Click the link above to open the appointment booking page.
+                      </p>
+                    </div>
+                    
+                    <p class="step-description">
+                      Now you can:
+                    </p>
+                    <div class="action-grid">
+                      <div class="action-card upload-card">
+                        <div class="action-icon">
+                          <i class="fas fa-upload"></i>
+                          <strong>Upload</strong>
+                        </div>
+                        <p>Upload a passport image</p>
                       </div>
-                      <strong>City</strong>
-                      <p>Select your city</p>
+                      
+                      <div class="action-card paste-card">
+                        <div class="action-icon">
+                          <i class="fas fa-paste"></i>
+                          <strong>Paste</strong>
+                        </div>
+                        <p>Paste an image from clipboard</p>
+                      </div>
+                      
+                      <div class="action-card drag-card">
+                        <div class="action-icon">
+                          <i class="fas fa-mouse-pointer"></i>
+                          <strong>Drag & Drop</strong>
+                        </div>
+                        <p>Drag & drop an image file</p>
+                      </div>
+                    </div>
+                    
+                    <div class="magic-box">
+                      <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);"></div>
+                      <div style="position: absolute; bottom: -30px; left: -30px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);"></div>
+                      <p>
+                        <i class="fas fa-magic"></i>
+                        You will see the magic — data fills automatically!
+                      </p>
                     </div>
                   </div>
-                  
-                  <p class="step-description">
-                    Add your default information:
-                  </p>
-                  <ul class="info-list">
-                    <li>
-                      <i class="fas fa-envelope"></i>
-                      Email address
-                    </li>
-                    <li>
-                      <i class="fas fa-phone"></i>
-                      Phone number
-                    </li>
-                    <li>
-                      <i class="fas fa-user"></i>
-                      Any other required default data
-                    </li>
-                  </ul>
-                  <p class="step-description">
-                    Finally, click the <strong class="register-btn">Register</strong> button.
-                  </p>
                 </div>
               </div>
 
-              <!-- STEP 6 -->
-              <div class="animate-on-scroll step-card">
-                <div class="step-header">
-                  <div class="step-number step6-number">6</div>
-                  <h3 class="magic-text">
-                    <i class="fas fa-rocket"></i> Start Using the Extension
-                  </h3>
-                </div>
-                <div style="animation: slideInLeft 0.8s ease 0.2s both;">
+              <!-- Mobile Setup Content -->
+              <div id="mobile-setup" class="setup-content">
+                <!-- YouTube Section for Mobile -->
+         
+
+                <!-- STEP 1 Mobile -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step1-number">1</div>
+                    <h3 class="magic-text">
+                      <i class="fas fa-download"></i> Download Kiwi Browser
+                    </h3>
+                  </div>
                   <p class="step-description">
-                    Open the official website to begin:
+                    Kiwi Browser supports Chrome extensions on Android. Download and install it first.
                   </p>
-                  
-                  <div class="website-link-box">
-                    <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: radial-gradient(circle, rgba(5, 150, 105, 0.1) 0%, transparent 70%);"></div>
-                    <a href="https://wafid.com/book-appointment/"
-                       target="_blank"
-                       class="website-link">
-                      <i class="fas fa-external-link-alt"></i>
-                      https://wafid.com/book-appointment/
+                  <a href="https://github.com/kiwibrowser/src.next/releases/download/12867802748/com.kiwibrowser.browser-arm-12867802748-github.apk"
+                     class="shimmer-btn btn-download" style="background: linear-gradient(90deg, #8b5cf6, #7c3aed);">
+                    <i class="fas fa-download"></i>
+                    Download Kiwi Browser APK
+                  </a>
+                  <div class="tip-box">
+                    <p>
+                      <i class="fas fa-info-circle"></i>
+                      <strong>Note:</strong> Enable "Install from unknown sources" in your Android settings if needed.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- STEP 2 Mobile -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step2-number">2</div>
+                    <h3 class="magic-text">
+                      <i class="fas fa-download"></i> Download Our Extension
+                    </h3>
+                  </div>
+                  <div style="animation: slideInLeft 0.8s ease;">
+                    <p class="step-description">
+                      Download the extension file directly to your mobile device.
+                    </p>
+                    <a href="https://drive.usercontent.google.com/u/0/uc?id=1RkyeM1n38236peiMzipdFFEK2etDHXf8&export=download"
+                       class="shimmer-btn btn-download">
+                      <i class="fas fa-file-archive"></i>
+                      Download Extension (Wafid Form Flow 2.0.5)
                     </a>
-                    <p>
-                      Click the link above to open the appointment booking page.
+                    <p class="step-note">
+                      <i class="fas fa-mobile-alt"></i>
+                      File will be saved in your Downloads folder
                     </p>
                   </div>
-                  
-                  <p class="step-description">
-                    Now you can:
-                  </p>
-                  <div class="action-grid">
-                    <div class="action-card upload-card">
-                      <div class="action-icon">
-                        <i class="fas fa-upload"></i>
-                        <strong>Upload</strong>
-                      </div>
-                      <p>Upload a passport image</p>
-                    </div>
-                    
-                    <div class="action-card paste-card">
-                      <div class="action-icon">
-                        <i class="fas fa-paste"></i>
-                        <strong>Paste</strong>
-                      </div>
-                      <p>Paste an image from clipboard</p>
-                    </div>
-                    
-                    <div class="action-card drag-card">
-                      <div class="action-icon">
-                        <i class="fas fa-mouse-pointer"></i>
-                        <strong>Drag & Drop</strong>
-                      </div>
-                      <p>Drag & drop an image file</p>
+                </div>
+
+                <!-- STEP 3 Mobile -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step3-number">3</div>
+                    <h3 class="magic-text">
+                      <i class="fab fa-chrome"></i> Install Extension in Kiwi Browser
+                    </h3>
+                  </div>
+                  <div style="animation: slideInLeft 0.8s ease 0.2s both;">
+                    <ol class="step-list">
+                      <li>
+                        <span class="list-number">①</span>
+                        Open <strong>Kiwi Browser</strong> on your device
+                      </li>
+                      <li>
+                        <span class="list-number">②</span>
+                        Tap the <strong>three dots (⋮)</strong> menu
+                      </li>
+                      <li>
+                        <span class="list-number">③</span>
+                        Select <strong>Extensions</strong>
+                      </li>
+                      <li>
+                        <span class="list-number">④</span>
+                        Tap the <strong>+</strong> button (from .zip/.crx/.user.js)
+                      </li>
+                      <li>
+                        <span class="list-number">⑤</span>
+                        Select the downloaded file: <code>Wafid Form Flow 2.0.5</code>
+                      </li>
+                      <li>
+                        <span class="list-number">⑥</span>
+                        Confirm installation when prompted
+                      </li>
+                    </ol>
+                  </div>
+                  <div class="success-box">
+                    <p>
+                      <i class="fas fa-check-circle"></i>
+                      <strong>Success indicator:</strong> Extension will appear in Kiwi Browser extensions list
+                    </p>
+                  </div>
+                </div>
+
+                <!-- STEP 4 Mobile -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step4-number">4</div>
+                    <h3 class="magic-text">
+                      <i class="fas fa-external-link-alt"></i> Open Wafid Website
+                    </h3>
+                  </div>
+                  <div style="animation: slideInLeft 0.8s ease 0.2s both;">
+                    <p class="step-description">
+                      Navigate to the Wafid appointment booking page:
+                    </p>
+                    <div class="website-link-box">
+                      <a href="https://wafid.com/book-appointment/"
+                         target="_blank"
+                         class="website-link">
+                        <i class="fas fa-external-link-alt"></i>
+                        https://wafid.com/book-appointment/
+                      </a>
+                      <p>
+                        Open this URL in Kiwi Browser
+                      </p>
                     </div>
                   </div>
-                  
-                  <div class="magic-box">
-                    <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);"></div>
-                    <div style="position: absolute; bottom: -30px; left: -30px; width: 80px; height: 80px; background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);"></div>
-                    <p>
-                      <i class="fas fa-magic"></i>
-                      You will see the magic — data fills automatically!
+                </div>
+
+                <!-- STEP 5 Mobile -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step5-number">5</div>
+                    <h3 class="magic-text">
+                      <i class="fas fa-cog"></i> Access & Register Extension
+                    </h3>
+                  </div>
+                  <div style="animation: slideInLeft 0.8s ease 0.2s both;">
+                    <p class="step-description">
+                      On the Wafid page, access the extension:
                     </p>
+                    <ol class="step-list">
+                      <li>
+                        <span class="list-number">①</span>
+                        Tap the <strong>three dots (⋮)</strong> menu in Kiwi Browser
+                      </li>
+                      <li>
+                        <span class="list-number">②</span>
+                        You'll see our extension listed
+                      </li>
+                      <li>
+                        <span class="list-number">③</span>
+                        Tap the extension to open it
+                      </li>
+                      <li>
+                        <span class="list-number">④</span>
+                        Go to <strong>Settings</strong>
+                      </li>
+                      <li>
+                        <span class="list-number">⑤</span>
+                        Register your extension with your details
+                      </li>
+                    </ol>
+                    <div class="why-pin-box">
+                      <i class="fas fa-info-circle"></i>
+                      <div>
+                        <strong>Important:</strong>
+                        <p>You must register the extension in settings before using it.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- STEP 6 Mobile -->
+                <div class="animate-on-scroll step-card">
+                  <div class="step-header">
+                    <div class="step-number step6-number">6</div>
+                    <h3 class="magic-text">
+                      <i class="fas fa-rocket"></i> Start Using on Mobile
+                    </h3>
+                  </div>
+                  <div style="animation: slideInLeft 0.8s ease 0.2s both;">
+                    <p class="step-description">
+                      After registration, you can:
+                    </p>
+                    <div class="feature-grid">
+                      <div class="feature-card">
+                        <div class="feature-icon">
+                          <i class="fas fa-camera"></i>
+                        </div>
+                        <strong>Take Photo</strong>
+                        <p>Use mobile camera to capture passport</p>
+                      </div>
+                      
+                      <div class="feature-card">
+                        <div class="feature-icon" style="animation-delay: 0.2s;">
+                          <i class="fas fa-images"></i>
+                        </div>
+                        <strong>Upload from Gallery</strong>
+                        <p>Select passport image from gallery</p>
+                      </div>
+                    </div>
+                    
+                    <div class="magic-box">
+                      <p>
+                        <i class="fas fa-magic"></i>
+                        Data will automatically fill in the Wafid form!
+                      </p>
+                    </div>
+                    
+                    <div class="tip-box">
+                      <p>
+                        <i class="fas fa-lightbulb"></i>
+                        <strong>Mobile Tip:</strong> For best results, ensure good lighting when taking passport photos.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -320,7 +556,7 @@
                     <div class="benefit-icon" style="animation-delay: 0.2s;">
                       <i class="fas fa-bullseye"></i>
                     </div>
-                    <strong>99.9% Accurate</strong>
+                    <strong>100% Accurate</strong>
                     <p>No manual typing errors</p>
                   </div>
                   
@@ -330,6 +566,14 @@
                     </div>
                     <strong>Professional Grade</strong>
                     <p>Designed for agencies & pros</p>
+                  </div>
+                  
+                  <div class="benefit-card">
+                    <div class="benefit-icon" style="animation-delay: 0.6s;">
+                      <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <strong>Mobile Compatible</strong>
+                    <p>Works on Android with Kiwi Browser</p>
                   </div>
                 </div>
               </div>
@@ -351,12 +595,15 @@
                 <span>
                   <i class="fas fa-heart"></i> Trusted by Thousands
                 </span>
+                <span>
+                  <i class="fas fa-mobile-alt"></i> Mobile Ready
+                </span>
               </div>
               <p class="footer-copyright">
                 © 2025 Passport Scanner Extension. All rights reserved.
               </p>
               <p class="footer-tagline">
-                ICAO-compliant • Privacy-focused • Offline-capable • Regular updates
+                ICAO-compliant • Privacy-focused • Offline-capable • Regular updates • Mobile Support
               </p>
             </td>
           </tr>
