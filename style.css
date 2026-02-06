@@ -1,5 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-/* Add these styles to your CSS file */
+
+/* Platform Selector */
+.platform-selector {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.platform-selector h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #1e293b;
+}
+
+.platform-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.platform-btn {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  border: 2px solid #cbd5e1;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.platform-btn i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.platform-btn.active {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-color: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.platform-btn:hover:not(.active) {
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  transform: translateY(-2px);
+}
+
+/* Setup Content */
+.setup-content {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.setup-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile-specific styles */
+#mobile-setup .step-card {
+  border-left: 4px solid #8b5cf6;
+}
+
+#mobile-setup .step-number {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  box-shadow: 0 6px 12px rgba(139, 92, 246, 0.3);
+}
+
+#mobile-setup .shimmer-btn {
+  background: linear-gradient(90deg, #8b5cf6, #7c3aed, #8b5cf6);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+#mobile-setup .shimmer-btn:hover {
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.5);
+}
+
+#mobile-setup .website-link-box {
+  background: linear-gradient(135deg, #faf5ff, #f5f3ff);
+  border: 1px solid #ddd6fe;
+}
+
+#mobile-setup .website-link {
+  color: #7c3aed;
+}
+
+#mobile-setup .magic-box {
+  background: linear-gradient(135deg, #faf5ff, #f5f3ff);
+  border: 1px solid #e9d5ff;
+}
+
+#mobile-setup .magic-box p {
+  color: #7c3aed;
+}
+
+/* Desktop-specific styles */
+#desktop-setup .step-card {
+  border-left: 4px solid #3b82f6;
+}
 
 /* YouTube Section */
 .youtube-section {
@@ -87,6 +199,7 @@
 .youtube-note i {
   margin-right: 6px;
 }
+
 /* Animation Keyframes */
 @keyframes fadeInUp {
   from {
@@ -786,6 +899,10 @@ code {
   background: linear-gradient(135deg, #fef3c7, #fde68a);
 }
 
+.benefit-card:nth-child(4) .benefit-icon {
+  background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+}
+
 .benefit-icon i {
   font-size: 20px;
 }
@@ -800,6 +917,10 @@ code {
 
 .benefit-card:nth-child(3) i {
   color: #d97706;
+}
+
+.benefit-card:nth-child(4) i {
+  color: #8b5cf6;
 }
 
 .benefit-card strong {
@@ -869,6 +990,12 @@ code {
   color: #f87171;
   animation: pulse 2s infinite;
   animation-delay: 1s;
+}
+
+.footer-badges span:nth-child(4) i {
+  color: #a78bfa;
+  animation: pulse 2s infinite;
+  animation-delay: 1.5s;
 }
 
 .footer-copyright {
