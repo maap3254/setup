@@ -128,3 +128,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+      const animatedElements = document.querySelectorAll('.animate-on-scroll');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('animated'); });
+      }, { threshold: 0.1 });
+      animatedElements.forEach(el => observer.observe(el));
+
+      // platform switching
+      const platformBtns = document.querySelectorAll('.platform-btn');
+      const setupContents = document.querySelectorAll('.setup-content');
+      platformBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const platform = this.getAttribute('data-platform');
+          platformBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          setupContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.id === platform + '-setup') content.classList.add('active');
+          });
+          document.querySelector('.content-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      // hover effects (already in css, but keep js for extra)
+      const cards = document.querySelectorAll('.step-card, .feature-card, .action-card, .benefit-card');
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', function() { this.style.transform = 'scale(1.02)'; });
+        card.addEventListener('mouseleave', function() { this.style.transform = 'scale(1)'; });
+      });
+
+      // download alert dummy (just for demonstration, not blocking actual links)
+      document.querySelectorAll('.btn-download').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          // real links are valid, but we keep behaviour
+        });
+      });
+
+      // register btn pulse
+      const registerBtn = document.querySelector('.register-btn');
+      if (registerBtn) {
+        setInterval(() => {
+          registerBtn.style.animation = 'none';
+          setTimeout(() => registerBtn.style.animation = 'pulse 2s infinite', 10);
+        }, 4000);
+      }
+    });
