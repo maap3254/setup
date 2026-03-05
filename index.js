@@ -272,7 +272,7 @@ function getPrivacyPolicyContent() {
     </ul>
     
     <h4>6. Contact Us</h4>
-    <p>Privacy concerns: privacy@passportscanner.com</p>
+    <p>Privacy concerns: wafidformflow@gmail.com</p>
   `;
 }
 
@@ -463,7 +463,7 @@ function getCCPAContent() {
     <p><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights.</p>
     
     <h4>How to Exercise Your Rights</h4>
-    <p>Email privacy@passportscanner.com with "CCPA Request" in the subject line. We may need to verify your identity.</p>
+    <p>Email wafidformflow@gmail.com with "CCPA Request" in the subject line. We may need to verify your identity.</p>
     
     <h4>Authorized Agent</h4>
     <p>You can designate an authorized agent to make requests on your behalf with written permission.</p>
@@ -511,6 +511,7 @@ function getCookiePolicyContent() {
     <p>We may update this Cookie Policy occasionally. We will notify you of material changes through the extension.</p>
     
     <h4>Contact Us</h4>
-    <p>For questions about our Cookie Policy: privacy@passportscanner.com</p>
+    <p>For questions about our Cookie Policy: wafidformflow@gmail.com</p>
   `;
 }
+
