@@ -407,7 +407,7 @@ function getGDPRContent() {
     </ul>
     
     <h4>Data Protection Officer</h4>
-    <p>Contact our DPO at dpo@passportscanner.com for any GDPR-related inquiries.</p>
+    <p>Contact our DPO at wafidformflow@gmail.com for any GDPR-related inquiries.</p>
     
     <h4>Supervisory Authority</h4>
     <p>You have the right to lodge a complaint with your local data protection authority.</p>
@@ -514,5 +514,6 @@ function getCookiePolicyContent() {
     <p>For questions about our Cookie Policy: wafidformflow@gmail.com</p>
   `;
 }
+
 
 
