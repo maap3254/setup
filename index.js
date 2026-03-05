@@ -317,7 +317,7 @@ function getTermsContent() {
     <p>The extension is provided "as is" without warranties. We are not liable for any damages arising from use of the extension.</p>
     
     <h4>9. Contact Information</h4>
-    <p>For questions about these terms, contact support@passportscanner.com</p>
+    <p>For questions about these terms, contact wafidformflow@gmail.com</p>
   `;
 }
 
@@ -514,4 +514,5 @@ function getCookiePolicyContent() {
     <p>For questions about our Cookie Policy: wafidformflow@gmail.com</p>
   `;
 }
+
 
