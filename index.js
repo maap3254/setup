@@ -1,5 +1,12 @@
 // Simple scroll animation
 document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Don't prevent default for mailto links
+      // Let the browser handle them normally
+      return true;
+    });
+  });
   const animatedElements = document.querySelectorAll('.animate-on-scroll');
   
   const observer = new IntersectionObserver((entries) => {
@@ -514,6 +521,7 @@ function getCookiePolicyContent() {
     <p>For questions about our Cookie Policy: wafidformflow@gmail.com</p>
   `;
 }
+
 
 
 
