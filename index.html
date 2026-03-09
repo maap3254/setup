@@ -4,16 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We've Moved!</title>
-    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInDown 1s ease;
+        }
+        
+        p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .button-wrapper {
+            animation: pulse 2s infinite;
+        }
+        
+        .redirect-btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .redirect-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            background: #f8f9fa;
+            color: #764ba2;
+            border-color: white;
+        }
+        
+        .redirect-btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .redirect-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .redirect-btn:hover::before {
+            left: 100%;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            p {
+                font-size: 1em;
+            }
+            
+            .redirect-btn {
+                padding: 15px 40px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>📢 We've Moved!</h1>
-        <p>Please visit our new website for all services and updates. Click the button below to be redirected.</p>
+        <h1>✨ We've Moved! ✨</h1>
+        <p>Visit our brand new website for an enhanced experience</p>
         
-        <a href="https://wafidfill.com" class="redirect-btn" target="_blank">Go to wafidfill.com</a>
-        
-        <p class="note">You will be redirected to our new website. Please update your bookmarks.</p>
+        <div class="button-wrapper">
+            <a href="https://wafidfill.com" class="redirect-btn" target="_blank">
+                Go to wafidfill.com →
+            </a>
+        </div>
     </div>
 </body>
 </html>
