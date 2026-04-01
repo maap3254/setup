@@ -1,141 +1,60 @@
-     * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(145deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .container {
-            text-align: center;
-            padding: 30px;
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            margin: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        h1 {
-            color: white;
-            font-size: 3em;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            letter-spacing: -0.5px;
-        }
-        
-        p {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 1.3em;
-            margin-bottom: 40px;
-            font-weight: 400;
-            line-height: 1.5;
-        }
-        
-        .button-wrapper {
-            margin-top: 20px;
-        }
-        
-        .beautiful-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: white;
-            color: #4158D0;
-            text-decoration: none;
-            padding: 20px 60px;
-            border-radius: 60px;
-            font-size: 1.5em;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 3px solid transparent;
-            position: relative;
-            overflow: hidden;
-            gap: 10px;
-        }
-        
-        .beautiful-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-            background: linear-gradient(145deg, #f9f9f9, #ffffff);
-            border-color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .beautiful-btn:active {
-            transform: scale(0.98);
-        }
-        
-        .beautiful-btn span {
-            background: linear-gradient(145deg, #4158D0, #C850C0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-        }
-        
-        .arrow {
-            font-size: 1.3em;
-            transition: transform 0.3s ease;
-            background: linear-gradient(145deg, #4158D0, #C850C0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .beautiful-btn:hover .arrow {
-            transform: translateX(8px);
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .button-wrapper {
-            animation: float 4s ease-in-out infinite;
-        }
-        
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.2em;
-            }
-            
-            p {
-                font-size: 1.1em;
-            }
-            
-            .beautiful-btn {
-                padding: 16px 40px;
-                font-size: 1.2em;
-            }
-        }
-        
-        /* Optional: Add a subtle shine effect */
-        .beautiful-btn::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .beautiful-btn:hover::after {
-            opacity: 1;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.beautiful-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beautiful-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.beautiful-btn:hover .arrow {
+    transform: translateX(5px);
+}
